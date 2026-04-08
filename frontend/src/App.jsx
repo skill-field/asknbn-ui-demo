@@ -9,8 +9,8 @@ import GuardrailsPage from './pages/studio/GuardrailsPage'
 import PromptsPage from './pages/studio/PromptsPage'
 import ToolsPage from './pages/studio/ToolsPage'
 import UDFsPage from './pages/studio/UDFsPage'
+import MonitoringPage from './pages/studio/MonitoringPage'
 import UserModePage from './pages/user/UserModePage'
-
 function App() {
   const [mode, setMode] = useState('studio') // 'studio' | 'user'
   const navigate = useNavigate()
@@ -39,6 +39,7 @@ function App() {
             <Route path="/studio/prompts" element={<PromptsPage />} />
             <Route path="/studio/tools" element={<ToolsPage />} />
             <Route path="/studio/udfs" element={<UDFsPage />} />
+            <Route path="/studio/monitoring" element={<MonitoringPage />} />
             <Route path="/user" element={<UserModePage />} />
             <Route path="*" element={<Navigate to="/studio/catalog" replace />} />
           </Routes>
