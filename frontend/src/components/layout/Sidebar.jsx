@@ -39,9 +39,14 @@ export default function Sidebar({ activeRoute }) {
 
       <div className="sidebar-section">
         <div className="sidebar-label">System</div>
-        <div className="sidebar-nav-item">
+        <div 
+          className={`sidebar-nav-item ${activeRoute === '/studio/monitoring' ? 'active' : ''}`}
+          onClick={() => navigate('/studio/monitoring')}
+          role="button"
+          tabIndex={0}
+        >
           <Activity className="nav-icon" size={18} />
-          Activity
+          Monitoring
         </div>
         <div className="sidebar-nav-item">
           <Settings className="nav-icon" size={18} />
